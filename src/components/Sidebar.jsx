@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 
 const Sidebar = () => {
 
-    const [isActive, setIsActive] = useState('users')
+    const [isActive, setIsActive] = useState('')
     const navigate = useNavigate();
     const handleClick = (value)=>{
         setIsActive(value)
@@ -34,7 +34,7 @@ const Sidebar = () => {
                     <IoHomeOutline/>
                     <p>Home</p>
                 </div>
-                <div className={`flex text-gray-600 items-center gap-2 rounded-md px-3 py-2 cursor-pointer ${isActive==='users' ? 'bg-[#0832DE] text-white':''}`}
+                <div className={`flex text-gray-600 items-center gap-2 rounded-md px-3 py-2 cursor-pointer ${isActive==='' ? 'bg-[#0832DE] text-white':''}`}
                 onClick={()=>handleClick('')}>
                     <LuUsers2/>
                     <p>Users</p>
